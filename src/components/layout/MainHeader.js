@@ -1,13 +1,19 @@
-import { Fragment } from 'react';
-import MainHeader from './MainHeader';
+import CartButton from "../Cart/CartButton";
+import classes from "./MainHeader.module.css";
 
-const Layout = (props) => {
+const MainHeader = (props) => {
   return (
-    <Fragment>
-      <MainHeader />
-      <main>{props.children}</main>
-    </Fragment>
+    <header className={classes.header}>
+      <h1>ReduxCart</h1>
+      <nav>
+        <ul>
+          <li>
+            <CartButton />
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
-export default Layout;
+export default MainHeader;
